@@ -1,11 +1,14 @@
-var takeANumber = function (katz, nextCustomer) {
-  if (katz.length > 0);
-  katz.push(nextCustomer);
-  return "Welcome, " + nextCustomer + ". You are number " + katz.length + " in line."
+var katzDeliLine = [];
+var ticketNumber = 0;
+
+var takeANumber = function (katz) {
+ticketNumber ++
+  katz.push(ticketNumber);
+  return "Welcome, " + ticketNumber + ". You are number " + katz.length + " in line."
 }
 
 function nowServing (katzDeliLine) {
-   if(katzDeliLine.length===0) {
+   if(katzDeliLine.length === 0) {
    return 'There is nobody waiting to be served!';
 }
    var customer = katzDeliLine.shift();
@@ -13,7 +16,7 @@ function nowServing (katzDeliLine) {
 }
 
 var currentLine = function (katzDeliLine) {
-  if (katzDeliLine.length===0) {
+  if (katzDeliLine.length === 0) {
   return "The line is currently empty.";
 }
    var customerAndNumber = [];
